@@ -17,8 +17,8 @@ const router = (filesApp) => {
   routes.get('/disconnect', (request, response) => AuthController.getDisconnect(request, response));
   routes.get('/users/me', (request, response) => UsersController.getUser(request, response));
   routes.post('/files', (request, response) => FilesController.uploadFile(request, response));
-  // routes.get('/files/:id', (request, response) => FilesController.getList(request, response));
-  // routes.get('/files', (request, response) => FilesController.getIDX(request, response));
+  routes.get('/files/:id', (request, response) => FilesController.getList(request, response));
+  routes.get('/files', (request, response) => FilesController.getIDX(request, response));
   // routes.put('/files/:id/publish', (request, response) =>
   // FilesController.putPublish(request, response));
   // routes.put('/files/:id/unpublish', (request, response) =>
