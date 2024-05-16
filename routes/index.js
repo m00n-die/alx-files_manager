@@ -19,10 +19,8 @@ const router = (filesApp) => {
   routes.post('/files', (request, response) => FilesController.uploadFile(request, response));
   routes.get('/files/:id', (request, response) => FilesController.getList(request, response));
   routes.get('/files', (request, response) => FilesController.getIDX(request, response));
-  // routes.put('/files/:id/publish', (request, response) =>
-  // FilesController.putPublish(request, response));
-  // routes.put('/files/:id/unpublish', (request, response) =>
-  // FilesController.putUnpublish(request, response));
+  routes.put('/files/:id/publish', (request, response) => FilesController.putPublish(request, response));
+  routes.put('/files/:id/unpublish', (request, response) => FilesController.putUnpublish(request, response));
   // routes.get('/files/:id/data', (request, response) =>
   // FilesController.getFile(request, response));
 };
